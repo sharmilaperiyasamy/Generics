@@ -10,7 +10,7 @@ namespace Core_Concept_Generics
     {
 
         //uc1 find maximum of three integers
-        public int toPrintMaximum_Int(int value1, int value2, int value3)
+        public T toPrintMaximum<T>(T value1, T value2, T value3) where T : IComparable
         {
             if (value1.CompareTo(value2) > 0 && value1.CompareTo(value3) > 0 ||
                 value1.CompareTo(value2) >= 0 && value1.CompareTo(value3) > 0 ||

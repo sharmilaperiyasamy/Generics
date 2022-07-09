@@ -13,7 +13,7 @@ namespace TestGenericMaximum
         {
             string a = "Peach", b = "Apple", c = "Banana";
             Core_Concept_Generics.PrintArray print = new Core_Concept_Generics.PrintArray();
-            var output = print.toPrintMaximum_String(a, b, c);
+            var output = print.toPrintMaximum(a, b, c);
             Assert.AreEqual(a, output);
         }
         [Test]
@@ -21,7 +21,7 @@ namespace TestGenericMaximum
         {
             string a = "Apple", b = "Peach", c = "Banana";
             Core_Concept_Generics.PrintArray print = new Core_Concept_Generics.PrintArray();
-            var output = print.toPrintMaximum_String(a, b, c);
+            var output = print.toPrintMaximum(a, b, c);
             Assert.AreEqual(b, output);
         }
         [Test]
@@ -29,7 +29,7 @@ namespace TestGenericMaximum
         {
             string a = "Banana", b = "Apple", c = "Peach";
             Core_Concept_Generics.PrintArray print = new Core_Concept_Generics.PrintArray();
-            var output = print.toPrintMaximum_String(a, b, c);
+            var output = print.toPrintMaximum(a, b, c);
             Assert.AreEqual(c, output);
         }
     }
