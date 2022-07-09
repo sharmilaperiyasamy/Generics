@@ -49,5 +49,26 @@ namespace Core_Concept_Generics
                 return value3;
             }
         }
+
+        //uc3 find maximum of three string values
+        public string toPrintMaximum_String(string value1, string value2, string value3)
+        {
+            if (value1.CompareTo(value2) > 0 && value1.CompareTo(value3) > 0 ||
+                value1.CompareTo(value2) >= 0 && value1.CompareTo(value3) > 0 ||
+                value1.CompareTo(value2) > 0 && value1.CompareTo(value3) >= 0)
+            {
+                return value1;
+            }
+            else if (value2.CompareTo(value1) > 0 && value2.CompareTo(value3) > 0 ||
+               value2.CompareTo(value1) >= 0 && value2.CompareTo(value3) > 0 ||
+               value2.CompareTo(value1) > 0 && value2.CompareTo(value3) >= 0)
+            {
+                return value2;
+            }
+            else
+            {
+                return value3;
+            }
+        }
     }
 }
