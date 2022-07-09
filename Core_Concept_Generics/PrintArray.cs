@@ -8,8 +8,7 @@ namespace Core_Concept_Generics
 {
     public class PrintArray
     { 
-
-        //uc1 find maximum of three integers
+        //uc4 find maximum of three values
         public T toPrintMaximum<T>(T value1, T value2, T value3) where T : IComparable
         {
             if (value1.CompareTo(value2) > 0 && value1.CompareTo(value3) > 0 ||
