@@ -6,6 +6,6 @@ Core_Concept_Generics.PrintArray<int> printInt = new Core_Concept_Generics.Print
 Core_Concept_Generics.PrintArray<double> printDouble = new Core_Concept_Generics.PrintArray<double>(array_double);
 Core_Concept_Generics.PrintArray<string> printString = new Core_Concept_Generics.PrintArray<string>(array_string);
 
-Console.WriteLine("Maximum of array values : " + printInt.showMaximum());
-Console.WriteLine("Maximum of array values : " + printDouble.showMaximum());
-Console.WriteLine("Maximum of array values : " + printString.showMaximum());
+printInt.printMax();
+printDouble.printMax();
+printString.printMax();

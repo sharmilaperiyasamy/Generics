@@ -30,5 +30,11 @@ namespace Core_Concept_Generics
             var Result = PrintArray<T>.toPrintMaximum(this.value);
             return Result;
         }
+        //uc7 to print the max to std out using generic method
+        public void printMax()
+        {
+            var max = toPrintMaximum(this.value);
+            Console.WriteLine("Maximum value is: " + max);
+        }
     }
 }
