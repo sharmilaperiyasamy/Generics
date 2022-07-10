@@ -8,36 +8,26 @@ namespace Core_Concept_Generics
 {
     public class PrintArray<T> where T : IComparable
     {
-        public T value1, value2, value3;
-        public PrintArray(T value1, T value2, T value3)
+        public T[] value;
+        public PrintArray(T[] value)
         {
-            this.value1 = value1;
-            this.value2 = value2;
-            this.value3 = value3;
+            this.value = value;
         }
-        //uc4 find maximum of three values
-        public static T toPrintMaximum(T value1, T value2, T value3)
+        //uc4 more than 3 integers and to use function
+        public static T[] sort(T[] value)
         {
-            if (value1.CompareTo(value2) > 0 && value1.CompareTo(value3) > 0 ||
-                value1.CompareTo(value2) >= 0 && value1.CompareTo(value3) > 0 ||
-                value1.CompareTo(value2) > 0 && value1.CompareTo(value3) >= 0)
-            {
-                return value1;
-            }
-            else if (value2.CompareTo(value1) > 0 && value2.CompareTo(value3) > 0 ||
-               value2.CompareTo(value1) >= 0 && value2.CompareTo(value3) > 0 ||
-               value2.CompareTo(value1) > 0 && value2.CompareTo(value3) >= 0)
-            {
-                return value2;
-            }
-            else
-            {
-                return value3;
-            }
+            Array.Sort(value);
+            return value;
+        }
+
+        public static T toPrintMaximum(params T[] value)
+        {
+            var sorted_values = sort(value);
+            return sorted_values[value.Length - 1];
         }
         public T showMaximum()
         {
-            T Result = PrintArray<T>.toPrintMaximum(this.value1, this.value2, this.value3);
+            var Result = PrintArray<T>.toPrintMaximum(this.value);
             return Result;
         }
     }
